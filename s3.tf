@@ -1,11 +1,8 @@
 #This Terraform Code Deploys Basic VPC Infra.
 provider "aws" {
-  region = "us-east-1"
-  #profile = "default" #AWS Credentials Profile (profile = "default") configured on local
-  #access_key = "AKIA4NHQRPQB5MWFD367"
-  #secret_key = "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"
-  #access_key = var.access_key
-  #secret_key = var.secret_key
+  region = "us-east-2"
+  access_key = ${var.access_key}
+  secret_key = ${var.secret_key}
 }
 
 
