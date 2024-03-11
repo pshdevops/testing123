@@ -71,3 +71,11 @@ variable "rotation_enabled" {
 variable "admin_rolename" {
   default = "s3_admin_role"
 }
+
+variable "access_key" {
+  default = ""
+}
+
+variable "secret_key" {
+  default = ""
+}
