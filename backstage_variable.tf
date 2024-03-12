@@ -1,7 +1,7 @@
 variable "account_id" {
   type        = string
   description = ""
-  default     = "1234567890"
+  default     = "backstage-test"
 }
 
 variable "user_access" {
@@ -14,5 +14,5 @@ variable "user_access" {
 variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
-  default     =  [ "bucket","bucket1" ]
+  default     =  [ "bucket-london","bucket-london1" ]
 }
