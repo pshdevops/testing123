@@ -10,7 +10,6 @@ variable "user_access" {
   default     = "readOnly"
 }
 
-
 variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
