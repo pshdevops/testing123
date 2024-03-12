@@ -1,7 +1,7 @@
 variable "account_id" {
   type        = string
   description = ""
-  default     = "12345678"
+  default     = "123456"
 }
 
 variable "user_access" {
@@ -14,5 +14,5 @@ variable "user_access" {
 variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
-  default     = [ abcdge,acbdgh ]
+  default     = ${ JSON.stringify(values.s3_folders) }
 }
