@@ -14,5 +14,5 @@ variable "user_access" {
 variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
-  default     = ${ JSON.stringify(values.s3_folders) }
+  default     = abcdg,acbdghe
 }
