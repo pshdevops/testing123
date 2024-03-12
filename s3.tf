@@ -44,6 +44,7 @@ module "dpa_poc_bucket" {
   domain               = var.domain
   account_id           = data.aws_caller_identity.current.account_id
   custom_bucket_policy = data.aws_iam_policy_document.storage_iam_s3_policy.json
+  s3_folders = var.s3_folders
 }
 
 /*
