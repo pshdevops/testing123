@@ -63,6 +63,6 @@ variable "custom_bucket_policy" {
 variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
-  default     = ["das/raw/", "das/standardized/"]
+  default     = ""
 }
 

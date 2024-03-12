@@ -28,7 +28,6 @@ variable "cost_center" {
   default     = "6000909"
 }
 
-
 variable "owner" {
   type        = string
   description = "sandbox"
