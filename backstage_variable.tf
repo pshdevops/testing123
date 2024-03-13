@@ -1,7 +1,7 @@
 variable "account_id" {
   type        = string
   description = ""
-  default     = "123456789011"
+  default     = "backstage-test"
 }
 
 variable "user_access" {
