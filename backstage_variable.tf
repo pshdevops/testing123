@@ -18,8 +18,3 @@ variable "s3_folders" {
     "bucket2",
   ]
 }
-
-variable "dpa_bucket_name" {
-  type = string
-  default     = "madhu-dpa-1234567890"
-}
