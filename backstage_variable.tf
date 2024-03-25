@@ -1,7 +1,7 @@
 variable "account_id" {
   type        = string
   description = ""
-  default     = "12345678"
+  default     = "12345678901"
 }
 
 variable "user_access" {
@@ -14,7 +14,7 @@ variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
   default     =  [
-    "das-bucket3",
-    "das-bucket4",
+    "bucket1",
+    "bucket2",
   ]
 }
