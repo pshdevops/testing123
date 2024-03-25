@@ -21,5 +21,5 @@ variable "s3_folders" {
 
 variable "dpa_bucket_name" {
   type = string
-  default     = "dpa-harsha-1234567890"
+  default     = "madhu-dpa-1234567890"
 }
