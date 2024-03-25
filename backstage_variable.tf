@@ -20,6 +20,6 @@ variable "s3_folders" {
 }
 
 variable "dpa_bucket_name" {
-  type = string
-  default = ""
+  type  = list(string)
+  default =  [ ]
 }

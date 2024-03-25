@@ -32,9 +32,9 @@ locals {
 
 module "dpa_poc_bucket" {
   source               = "./modules/s3"
-  count                = var.env == "sandbox" ? 1 : 0
+  count                = var.env == "sandbox" ? length(var.dpa_bucket_name) : 0
   env                  = var.env
-  bucket_name          = "${var.project_name}-${var.env}-${var.domain}-${var.dpa_bucket_name}"
+  bucket_name          = "${var.project_name}-${var.env}-${var.domain}-${var.dpa_bucket_name[count_index]}"
   project_name         = var.project_name
   confidentality       = var.confidentality
   compliance           = var.compliance
@@ -73,7 +73,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
 */
 
 resource "aws_s3_bucket_policy" "data-analytics-cross-sharing-policy" {
-  bucket = module.dpa_poc_bucket[0].s3_bucket_id
+  bucket = module.dpa_poc_bucket[*].s3_bucket_id
 
   policy = <<POLICY
 {
@@ -87,7 +87,7 @@ resource "aws_s3_bucket_policy" "data-analytics-cross-sharing-policy" {
                 "AWS": "${aws_iam_role.data-analytics-s3-s3-read-access-role.arn}"
             },
             "Action": "s3:ListBucket",
-            "Resource": ["${module.dpa_poc_bucket[0].s3_bucket_arn}","${module.dpa_poc_bucket[0].s3_bucket_arn}/*"]
+            "Resource": ["${module.dpa_poc_bucket[*].s3_bucket_arn}","${module.dpa_poc_bucket[*].s3_bucket_arn}/*"]
         },
         {
             "Sid": "Stmt1357935676138",
@@ -99,7 +99,7 @@ resource "aws_s3_bucket_policy" "data-analytics-cross-sharing-policy" {
                 "s3:GetObject",
                 "s3:PutObject"
             ],
-            "Resource": ["${module.dpa_poc_bucket[0].s3_bucket_arn}","${module.dpa_poc_bucket[0].s3_bucket_arn}/*"]
+            "Resource": ["${module.dpa_poc_bucket[*].s3_bucket_arn}","${module.dpa_poc_bucket[*].s3_bucket_arn}/*"]
         }
         
     ]
