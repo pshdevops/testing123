@@ -18,3 +18,8 @@ variable "s3_folders" {
     "das-bucket4",
   ]
 }
+
+variable "dpa_bucket_name" {
+  type = string
+  default = ""
+}
