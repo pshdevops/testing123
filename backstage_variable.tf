@@ -14,7 +14,7 @@ variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
   default     =  [
-    "bucket1",
-    "bucket2",
+    "bucket3",
+    "bucket4",
   ]
 }
