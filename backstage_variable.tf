@@ -14,12 +14,12 @@ variable "s3_folders" {
   type        = list(string)
   description = "s3 folders"
   default     =  [
-    "bucket3",
-    "bucket4",
+    "bucket1",
+    "bucket2",
   ]
 }
 
 variable "dpa_bucket_name" {
   type  = list(string)
-  default =  [ ]
+  default = []
 }
