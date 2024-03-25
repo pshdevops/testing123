@@ -1,3 +1,9 @@
+variable "account_id" {
+  type        = string
+  description = ""
+  default     = "12345678901"
+}
+
 variable "user_access" {
   type        = string
   description = "user access"
@@ -15,5 +21,5 @@ variable "s3_folders" {
 
 variable "dpa_bucket_name" {
   type = string
-  default     = "harsha-dpa123456778"
+  default     = "dpa-harsha-1234567890"
 }
