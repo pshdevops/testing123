@@ -34,7 +34,7 @@ module "dpa_poc_bucket" {
   source               = "./modules/s3"
   count                = var.env == "sandbox" ? 1 : 0
   env                  = var.env
-  bucket_name          = "${var.project_name}-${var.env}-${var.domain}-data-analytics-poc"
+  bucket_name          = "${var.project_name}-${var.env}-${var.domain}-data-analytics-poc123"
   project_name         = var.project_name
   confidentality       = var.confidentality
   compliance           = var.compliance
