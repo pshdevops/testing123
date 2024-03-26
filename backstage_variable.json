@@ -1,12 +1,20 @@
 {
-    "objectList": [
-        {
-          "account_id": "1234567890",
-          "user_access": "readOnly",
-          "bucket_name": "nknknkjbjkflsv",
-          "s3_folders": [
-            "bucket1"
-          ]
-        }
-    ]
+  "objectList": [
+    {
+      "account_id": "1234567890",
+      "user_access": "readOnly",
+      "bucket_name": "nknknkjbjkflsv",
+      "s3_folders": [
+        "bucket1"
+      ]
+    },
+    {
+      "account_id": "12345678",
+      "user_access": "readOnly",
+      "bucket_name": "harsha-321",
+      "s3_folders": [
+        "bucket1"
+      ]
+    }
+  ]
 }
