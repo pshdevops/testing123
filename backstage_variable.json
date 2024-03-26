@@ -1,12 +1,18 @@
 {
-    "objectList": [
-        {
-          "account_id": "1234567890",
-          "user_access": "readOnly",
-          "bucket_name": "nknknkjbjkflsv",
-          "s3_folders": [
-            "bucket1"
-          ]
-        }
-    ]
+  "objectList": [
+    {
+      "account_id": "1234567890",
+      "user_access": "readOnly",
+      "bucket_name": "nknknkjbjkflsv",
+      "s3_folders": [
+        "bucket1"
+      ]
+    },
+    {
+      "account_id": "123456789012",
+      "user_access": "readOnly",
+      "bucket_name": "dpa-harsha-0987654321-logging",
+      "s3_folders": "bucket1,bucket2"
+    }
+  ]
 }
